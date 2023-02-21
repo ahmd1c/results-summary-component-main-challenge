@@ -1,0 +1,223 @@
+
+:root{
+--Light-red: hsl(0, 100%, 67%);
+--Orangey-yellow: hsl(39, 100%, 56%);
+--Green-teal: hsl(166, 100%, 37%);
+--Cobalt-blue: hsl(234, 85%, 45%);
+
+--Light-slate-blue : hsl(252, 40%, 49%);
+--Light-royal-blue : hsl(241, 81%, 54%);
+
+--Violet-blue : hsla(256, 72%, 46%, 1);
+--Persian-blue : hsla(241, 72%, 46%, 0);
+
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsla(241, 100%, 89%, 0.861);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+main{
+    margin: auto;
+    height: 100vh;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--Pale-blue);
+}
+
+main .result{
+    background:linear-gradient(var(--Light-slate-blue)  ,var(--Light-royal-blue)90%  );
+    width: 340px;
+    height : 480px;
+    text-align: center;
+    color: white;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .result h2{
+    color: var(--Light-lavender);
+    font-size: 27px;
+}
+
+main .result .circle{
+    margin:35px auto;
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background:linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0.196));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .result .circle h1{
+    font-size: 4rem;
+}
+
+main .result .circle p{
+    color: var(--Light-lavender);
+}
+
+main .result .second{
+    color: var(--Light-lavender);
+    font-size: 17px;
+    margin:12px auto;
+    width:85%;
+}
+
+main .summary{
+    width: 340px;
+    background-color: var(--White);
+    box-shadow: .5rem 0 20px var(--Light-lavender);    
+    height : 480px;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main .summary .item{
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
+    padding:0 15px;
+    border-radius: 10px;
+
+}
+
+.item:first-of-type{
+    background-color: hsla(0, 100%, 67%, 0.073);
+}
+.item:first-of-type div span{
+    color: hsl(0, 100%, 67%);
+    font-weight: 700;
+}
+
+.item:nth-of-type(2){
+    background-color:rgba(255, 177, 31, 0.073) ;
+}
+.item:nth-of-type(2) div span{
+    color: var(--Orangey-yellow);
+    font-weight: 700;
+}
+
+
+.item:nth-of-type(3){
+    background-color:rgba(0, 189, 145, 0.099);
+}
+.item:nth-of-type(3) div span{
+    color: var(--Green-teal);
+    font-weight: 700;
+}
+
+.item:nth-of-type(4){
+    background-color:rgba(17, 36, 212, 0.103);
+}
+.item:nth-of-type(4) div span{
+    color: var(--Cobalt-blue);
+    font-weight: 700;
+}
+
+main .summary .item p{
+    color:rgb(98 111 139);
+}
+main .summary .item p span{
+    color: hsl(224deg 57% 8%);
+    font-weight: 700;
+}
+
+main .summary .item .icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .summary button{
+    border-radius: 60px;
+    border: none;
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.897);
+    background-color: var(--Dark-gray-blue);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+main .summary button:hover{
+    background:linear-gradient(var(--Light-slate-blue)  ,var(--Light-royal-blue) );
+    cursor: pointer;
+}
+
+main .attribution{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+}
+
+
+@media(max-width:680px){
+    
+main{
+    width: 100%;
+    background-color: var(--White)
+    }
+
+    main .result{
+        width: 100%;
+        height : 350px;
+        padding: 15px 30px;
+        border-radius: 0 0 30px 30px;
+        justify-content: space-evenly;
+    }
+
+    main .result .circle{
+        margin:15px auto;
+        width:120px;
+        height: 120px;
+    }
+    main .result .circle h1{
+        font-size: 2.5rem;
+    }
+    main .result .circle p{
+        font-size: .7rem;
+    }
+    main .summary{
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0 0 30px 30px;
+    }
+    .second{
+        font-size: 16px;
+        width:90%;
+        margin-top: 0;
+    }
+    main .summary h2{
+        font-size: 1.3rem;
+    }
+    main .attribution{
+        position: relative;
+        font-size: 16px;
+        bottom: 15px;
+        left: 0;
+    }
+}
